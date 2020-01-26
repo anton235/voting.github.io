@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Initialize Election</title>
+ <!-- Bootstrap Core CSS -->
+ <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+ <!-- Custom Fonts from Google -->
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+ 
+  <link href="css/admin.css" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Navigation -->
+        <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+       
+          <div class="container">
+              <!-- Logo and responsive toggle -->
+              <div class="navbar-header">
+                  <img src="images/Logo.png" alt="Logo" height="42" width="42" class="rounded-corners">
+                  <span > Votechain</span>
+  
+              </div> 
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav navbar-right"> 
+              
+                  <li>
+                      <a href="#" id="contact-btn">Contact Us</a>
+                  </li>
+                  <li>
+                      <a href="admin.html" id="contact-btn">Activate election</a>
+                  </li>
+              </ul>
+              
+          </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </nav>
+   
+    <!-- Header -->
+      <header>
+        
+       
+                <div class="menu my-5 col-5 offset-7">
+                  <h2>Initialize Elections </h2>
+                  <form action="#" id="electionForm" method="POST">
+                 <div class="banner-message">
+                    Add Supply: <input type=text id="supplyInput" placeholder="uint256_value" > 
+                    </div><br>
+                 <div class="banner-message">
+                    Add Voters<input type=text id="votersInput" placeholder="address[]">  
+                    </div><br>
+                 <div class="banner-message">
+                      Add Candidates<input type=text id="candidatesInput" placeholder="address[]" >
+                      </div><br>
+                 <div class="banner-message">
+                        Time of election start:<input type="datetime-local" id="dateTimeStart" value="2020-01-25T07:00"/> 
+                        </div><br>
+                <div class="banner-message">
+                          Time of election end:<input type="datetime-local" id="dateTimeEnd" value="2020-01-25T20:00"/> 
+                          
+              </div>
+              <div class="row">   
+              <div class="col" style="display: flex;"> <button type="submit" id="submit" class=" btn mx-auto btn-primary btn-lg " > Submit </button>          </div>
+              <div class="col" style="display: flex;"> <button id="reset" class="btn mx-auto btn-primary btn-lg " type="reset" value="Reset">Reset</button></div>
+
+              </div>
+               
+              
+              </div><br>
+            
+          </div>
+        </form>
+      </header>
+ 
+  <div id="results"></div>
+    
+    <!-- Footer -->
+      <footer class="page-footer">
+      
+        <!-- Contact Us -->
+          <div class="contact" id="contact-section">
+            <div class="container">
+          <h2 class="section-heading">Contact Us</h2>
+          <p><span class="glyphicon glyphicon-earphone"></span><br> +1(23) 456 7890</p>
+          <p><span class="glyphicon glyphicon-envelope"></span><br> Votechain@gmail.com</p>
+            </div>
+          </div>
+            
+          <!-- Copyright etc -->
+          <div class="small-print">
+            <div class="container">
+              <p>Copyright &copy; Votechain.com 2020</p>
+            </div>
+          </div>
+          
+      </footer>
+  
+      <!-- jQuery -->
+      <!-- <script src="js/jquery-1.11.3.min.js"></script> -->
+      <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!-- Plugin JavaScript -->
+      <script src="js/jquery.easing.min.js"></script>    
+      <!-- Custom Javascript -->
+      <script src="js/holder.min.js"></script>
+      <script src="js/web3.min.js"></script>
+      <script src="js/truffle-contract.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/admin.js"></script>
+   
+</body>
+</html>
