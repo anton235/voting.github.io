@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Initialize Election</title>
+ <!-- Bootstrap Core CSS -->
+ <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+ <!-- Custom Fonts from Google -->
+ <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+ <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="css/admin.css" rel="stylesheet">
+
+</head>
+<body>
+        <!-- Navigation -->
+        <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+       
+          <div class="container">
+              <!-- Logo and responsive toggle -->
+              <div class="navbar-header">
+                  <a href="index.html">
+                    <img src="images/Logo.png" alt="Logo" height="42" width="42" class="rounded-corners">
+                    <span > Votechain</span>
+                  </a>
+              </div> 
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+              <ul class="nav navbar-nav navbar-right"> 
+              
+                  <li>
+                      <a href="#" id="contact-btn">Contact Us</a>
+                  </li>
+                  <li>
+                      <a href="index.html" id="contact-btn">Back To Home Page</a>
+                  </li>
+              </ul>
+              
+          </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </nav>
+   
+      <header>     
+             
+                
+                <div class="container">
+                  <div class="row">
+                   
+                    <div class="col-sm-9 mx-auto bg-light boxStyle" id="mainContractForm">
+                      <h1>Initialize Elections </h1>
+                <form name="theform" action="#" id="electionForm" method="POST">
+                  <div class="form-group">
+                    <div class="width30 floatL"><label>Name Your Election:</label> </div>
+                    <div class="width70 floatR"><input type="text" id="nameInput" required="required" pattern="[a-zA-Z][a-zA-Z0-9 ]{7,}" placeholder="Election Name begin with a letter"></div>            
+                  </div>
+                  <br><br><br>
+                  <div class="form-group">
+                    <div class="width30 floatL"><label>Describe Your Election:</label> </div>
+                    <div class="width70 floatR"><input type="text" id="descriptionInput" required="required" placeholder="Election description"></div>            
+                  </div>
+                  <br><br><br>
+                  <div class="form-group">
+                    <div class="width30 floatL"><label> Add Supply:</label> </div>
+                    <div class="width70 floatR"><input type=text id="supplyInput" required="required" placeholder="uint256_value" ></div> 
+                  </div>
+                  <br><br><br>
+                  <div class="form-group">
+                    <div class="width30 floatL"><label>Add Voters:</label> </div>
+                    <div class="width70 floatR"><input type=text id="votersInput" required="required" placeholder="address[]"></div>
+                  </div>
+                  <br><br><br>         
+                  <div class="form-group">
+                    <div class="width30 floatL"><label>Time of election start:</label> </div>
+                    <div class="width70 floatR"><input type="datetime-local" id="dateTimeStart" value="2020-01-22T11:00"/></div>                       
+                  </div>
+                  <br><br><br>
+                  <div class="form-group">
+                    <div class="width30 floatL"><label>Time of election end:</label> </div>
+                    <div class="width70 floatR"><input type="datetime-local" id="dateTimeEnd" value="2020-01-25T20:00"/></div>            
+                  </div>
+                  <br><br>
+                
+                  <br><br>
+                  <div class="form-group">
+                    <div class="row">   
+                      <div class="width50"><input class="btn btn-success" button type="submit" id="submit" style="font-weight: bold"></input class="btn btn-success" button></div>
+                      <div class="width50"><input class="btn btn-danger" type="reset" style="font-weight: bold"></div>	
+                    </div>
+                  </div>
+              </div>
+              
+              </div>
+            </div><br>
+                  <div id="myModal" class="modal">
+                 
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <p>Contract address is:           </p>
+                      <textarea id="contractAdd"></textarea>
+                      <button title="Copy contract address" type="button" onclick="myCopy()">Copy</button>
+                    </div>
+                  </div>
+            
+                </form>
+            </div>
+          </div>
+          
+    
+            <!--style="display:none;" >  -->
+            
+           <div class="row">                                             
+          <div class="col-sm-8 mx-auto bg-light boxStyle" id="addCandidatesForm" style="display:none;" > 
+            <h1>Initialize Candidates </h1>
+                <form action="#" id="electionForm" method="POST">
+
+                  <div class="form-group">
+                   <div class="width30 floatL"><label>New Candidate Address:</label> </div>
+                   <div class="width70 floatR"><input type=text id="newCandidateAddress" placeholder="Candidate address" > </div>
+                    </div><br><br>  <br>  
+                    <div class="form-group">
+                <div class="width30 floatL"><label>New Candidate Name:</label> </div> 
+                <div class="width70 floatR"><input type=text id="newCandidateName" placeholder="Candidate name"></div>
+               </div><br><br> <br>  
+               <div class="form-group">
+               <div class="width30 floatL"><label>New Candidate Description:</label> </div>
+                <div class="width70 floatR"><input type=text id="newCandidateDescription" placeholder="Candidate description" ></div>
+               </div><br> <br>  
+                <div class="form-group">
+                 <div class="width30 floatL"><label>New Candidate Image Link:</label> </div>
+                  <div class="width70 floatR"> <input type=text id="newCandidateImageLink" placeholder="E.G https://images.maariv.co.il/image/upload/h_168,w_268/520548 " ></div>
+                  </div><br> <br><br>  
+
+                
+                  <div class="row">   
+                    <div class="width50"><input class="btn btn-success" type="button" id="addCandidateButton" style="font-weight: bold" value="submit" onclick="addCandidate()"></input class="btn btn-success" button></div>
+                      <div class="width50"><input class="btn btn-danger" type="reset" style="font-weight: bold"></div>	
+                     </div>
+                     
+                </form>
+              </div><br>
+            
+          
+      </header>
+ 
+  <div id="results"></div>
+  <!-- <footer>		 -->
+    <div class="small-print">
+      <div class="container">
+        <p> Contact Us</p>
+        <p><span class="glyphicon glyphicon-earphone"></span><br> +1(23) 456 7890</p>
+          <p><span class="glyphicon glyphicon-envelope"></span><br> Votechain@gmail.com</p>
+        <p>Copyright &copy; Votechain.com 2020 </p>
+      </div>
+    </div>
+      <!-- jQuery -->   
+      <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <!-- Plugin JavaScript -->
+      <script src="js/jquery.easing.min.js"></script>    
+      <!-- Custom Javascript -->
+      <script src="js/holder.min.js"></script>
+      <script src="js/web3.min.js"></script>
+      <script src="js/truffle-contract.js"></script>
+      <script src="js/custom.js"></script>
+      <script src="js/admin.js"></script>
+   
+</body>
+</html>

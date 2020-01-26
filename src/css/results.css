@@ -1,0 +1,335 @@
+ import compass
+ 
+
+html{
+  display: table;
+}
+canvas{
+  /* width: 900px;
+  height: 200px; */
+  position: absolute;
+  top:0;
+  width:100%;
+  z-index:100;
+  height: 100%;
+  background: transparent;
+  margin: 30px auto;
+  margin-top: 180px;
+  color: #000;
+}
+body {
+  background-image: url('../images/results_background.png') ;
+  background-position: top center;
+  background-size: cover;
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  color: rgb(28, 32, 30);
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  /* font-size: 1.0rem; */
+}
+ 
+    #candidatesSelect.form-control{
+        font-size: 28px;
+    }
+
+h2{
+    margin-top: 210px;
+    margin-left: -400px;
+    color:black;
+}
+
+
+section {
+    min-height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+}
+#votingPage td{
+text-align: left;
+}
+
+img.rounded-corners{
+    border-radius: 50%;
+    width: 80px;
+}
+
+.serv ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    
+}
+
+.serv ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+    
+}
+
+.navbar{
+    background-color:transparent;    
+    position: absolute;
+    top:0%;
+    width:100%;
+    z-index:100;
+    height: 100;
+   
+    margin: 30px auto;
+    margin-top: 15px;
+    color: #000;
+}
+.navbar-header{
+   font-size: 40px;
+}
+.navbar-brand{
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	display:inline-block;
+}	
+	
+.feature {
+	background-color: yellowgreen;
+	color: greenyellow;
+}
+    
+article img{
+width: 100%;
+border-radius: 10%;
+border: 1px  solid gray;
+border-bottom: none;
+}
+.article-intro {
+    margin-bottom: 25px;
+    text-align: left;
+    padding: 0;
+
+}
+.article-intro p{
+    padding: 5px 15px 20px 15px;
+    line-height:20px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.wrapper{
+    height:75vh;
+    border-radius: 10%;
+    background-color: rgb(198, 209, 231);
+    margin: auto 1.7%;
+    border: 1px solid gray;
+}
+
+.footer-blurb {
+    padding: 30px 0;
+    background-color: goldenrod;
+    color: black;
+}
+    
+.footer-blurb-item {
+    padding: 30px;
+    }
+ 
+.small-print {
+    background-color: floralwhite;
+	padding: 30px 0;
+}
+.btn-default {
+    border-color: #fff;
+    color: #222;
+    background-color: #fff;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    border-color: #eee;
+    color: #222;
+    background-color: #eee;
+}
+
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    background-image: none;
+}
+
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn-default .badge {
+    color: #fff;
+    background-color: #222;
+}
+
+.btn-primary {
+    
+    border-color: yellowgreen;
+    color: #fff;
+    background-color: yellowgreen;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+	transition: all .35s;
+	position:relative;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    border-color: limegreen;
+    color: #fff;
+    background-color: limegreen;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: yellowgreen;
+    background-color: yellowgreen;
+}
+
+.btn-primary .badge {
+    color: yellowgreen;
+    background-color: #fff;
+}
+
+
+.btn {
+    border-radius: 300px;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+}
+.img-responsive {
+    border-radius: 30%;
+
+}
+
+::-moz-selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+::selection {
+    text-shadow: none;
+    color: #fff;
+    background: #222;
+}
+
+.more {display: none;} 
+.chart{
+    display:table;
+    table-layout: fixed;   
+    
+    width:100%;
+    /* max-width:700px; */
+    
+    height:00px;
+    margin:0 auto;
+    
+    background-image:linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%);
+    background-size: 100% 50px;
+    background-position: left top;
+  }
+  .chart span{
+      margin:0 1em;
+      display: block;
+      animation: draw 1s ease-in-out;
+      line-height: 24px;
+      
+    }
+
+    .voteColumn{
+        min-height: 1px;
+        background:rgb(240, 133, 21);
+        
+    }
+    .chart p {
+        color: rgb(21, 240, 119);
+        text-shadow: 2px 2px 2px grey;
+        font-size: 25px;
+    }
+    .chart .candidateName{
+        min-height:48px;
+        background:rgba(21, 240, 119,0.5);
+    }
+     .chart li{
+      
+      position:relative;
+      display:table-cell;
+      vertical-align:bottom;
+      
+
+    }
+    .chart span:before{
+      position:absolute;
+      left:0;right:0;top:100%;
+      padding:5px 1em 0;
+          display:block;
+      text-align:center;
+      content:attr(title);
+      word-wrap: break-word;
+    }
+  
+  @keyframes draw{
+    0%{height:0;} 
+  }

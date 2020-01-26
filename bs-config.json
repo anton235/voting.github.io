@@ -1,0 +1,7 @@
+{
+  "server": {
+    "baseDir": ["./public", "./build/contracts", "./src"]
+  
+  }
+}
+
